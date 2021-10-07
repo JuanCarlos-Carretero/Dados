@@ -7,7 +7,8 @@ public class JuegoDados {
     Scanner scan = new Scanner(System.in);
     Dado dado = new Dado();
     public boolean replay;
-    int puntos = 0;
+    int partidasGanadas = 0;
+    int partidasPerdidas = 0;
 
     public static ArrayList<Player> playersList;
 
@@ -33,11 +34,12 @@ public class JuegoDados {
                 while (replay) {
                     dado.play();
                     if (dado.ganada) {
-                        player.setPoints(puntos = puntos + 1);
-                        System.out.println(player.getName() + " " + player.getPoints());
+                        player.setPartidasGanadas(partidasGanadas = partidasGanadas + 1);
+                        System.out.println(player.getName() + " " + player.getPartidasGanadas());
                         System.out.println("¡Bien lanzado!");
                     } else {
-                        System.out.println(player.getName() + " " + player.getPoints());
+                        player.setPartidasPerdidas(partidasPerdidas = partidasPerdidas + 1);
+                        System.out.println(player.getName() + " " + player.getPartidasGanadas());
                         System.out.println("¡Suerte la proxima!");
                     }
                     System.out.println();

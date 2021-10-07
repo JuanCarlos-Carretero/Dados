@@ -2,11 +2,13 @@ package com.company;
 
 public class Player {
     private String name;
-    private int points;
+    private int partidasGanadas;
+    private int partidasPerdidas;
+    private int partidasTotales;
 
     public Player(String name) {
         this.name = name;
-        points = 0;
+        partidasGanadas = 0;
     }
 
     public String getName() {
@@ -17,19 +19,35 @@ public class Player {
         this.name = name;
     }
 
-    public int getPoints() {
-        return points;
+    public int getPartidasGanadas() {
+        return partidasGanadas;
     }
 
-    public void setPoints(int points) {
-        this.points = points;
+    public void setPartidasGanadas(int partidasGanadas) {
+        this.partidasGanadas = partidasGanadas;
     }
 
     @Override
     public String toString() {
         return "Player{" +
                 "name='" + name + '\'' +
-                ", points=" + points +
+                ", points=" + partidasGanadas +
                 '}';
+    }
+
+    public int getPartidasPerdidas() {
+        return partidasPerdidas;
+    }
+
+    public void setPartidasPerdidas(int partidasPerdidas) {
+        this.partidasPerdidas = partidasPerdidas;
+    }
+
+    public int getPartidasTotales() {
+        return partidasTotales;
+    }
+
+    public void setPartidasTotales(int partidasTotales) {
+        this.partidasTotales = partidasTotales;
     }
 }

@@ -19,9 +19,10 @@ public class Clasificacion {
         System.out.println();
         seguir=false;
         try {
-            System.out.println("Nombre     Puntuacion");
+            System.out.println("Nombre - Ganadas - Perdidas - Totales");
             for (Player player : JuegoDados.playersList) {
-                System.out.println( player.getName() + "  " + player.getPoints());
+                player.setPartidasTotales(player.getPartidasGanadas() + player.getPartidasPerdidas());
+                System.out.println( player.getName() + " - " + player.getPartidasGanadas() + " - " + player.getPartidasPerdidas() + " - " + player.getPartidasTotales());
                 seguir = true;
             }
         } catch (Exception e){
